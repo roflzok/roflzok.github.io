@@ -1,0 +1,23 @@
+{
+  "name": "color-blinder",
+  "version": "0.0.1",
+  "homepage": "https://github.com/chrisbolin/color-blinder",
+  "authors": [
+    "Chris Bolin <bolin.chris@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Color.Blind": "http://mudcu.be/sphere/js/Color.Blind.js",
+    "Color.Space": "http://mudcu.be/sphere/js/Color.Space.js",
+    "delta-e": "~0.0.7",
+    "angular": "~1.4.1",
+    "lodash": "~3.9.3"
+  }
+}
