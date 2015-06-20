@@ -18,6 +18,7 @@
     "Color.Space": "http://mudcu.be/sphere/js/Color.Space.js",
     "delta-e": "~0.0.7",
     "angular": "~1.4.1",
-    "lodash": "~3.9.3"
+    "lodash": "~3.9.3",
+    "i-color": "https://raw.githubusercontent.com/Shushik/i-color/master/i-color.js"
   }
 }

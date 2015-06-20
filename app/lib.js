@@ -16,6 +16,27 @@ Lib = {}; // global export
     );
   };
 
+  var caseKeys = function(obj,lower) {
+    _.forOwn(obj, function(value, oldKey, obj){
+      var newKey = lower? oldKey.toLowerCase() : oldKey.toUpperCase();
+      obj[newKey] = value;
+      if (newKey !== oldKey) {
+        delete obj[oldKey];
+      }
+    });
+    return obj;
+  };
+
+  var colorToLab = function(colorString) {
+    var rgb = caseKeys(
+      colorStringToRGB(colorString), true
+    ); // lowerCase for IColor
+    
+    return caseKeys(
+      IColor.convert(rgb,'LAB')
+    ); // upperCase for Color.Blind and Delta
+  };
+
   Lib.colorToBlind = function(colorString, colorBlindType) {
     var colorBlindTypes = ['protan', 'deutan', 'tritan', 'achroma', 'custom'];
     colorBlindType = colorBlindType || 'deutan'; // default
@@ -24,11 +45,14 @@ Lib = {}; // global export
     }
 
     var color = colorStringToRGB(colorString);
-    console.log(color);
     var colorBlind = Color.Blind(color, colorBlindType);
-    console.log(colorBlind);
 
     return RGBToColorString(colorBlind);
   };
 
+  Lib.colorDistance = function(colorString1, colorString2) {
+    return DeltaE.getDeltaE94(colorToLab(colorString1), colorToLab(colorString2));
+  };
+
 })();
+
