@@ -2,6 +2,9 @@ Lib = {}; // global export
 
 (function(){
   var colorStringToRGB = function(colorString) {
+    if (colorString[0] === '#') {
+      colorString = colorString.substr(1);
+    }
     if (colorString.length !== 6) {
       throw new Error('Color must be 6 characters long.');
     }
@@ -45,9 +48,13 @@ Lib = {}; // global export
     }
 
     var color = colorStringToRGB(colorString);
-    var colorBlind = Color.Blind(color, colorBlindType);
+    var colorBlindString = RGBToColorString(Color.Blind(color, colorBlindType));
 
-    return RGBToColorString(colorBlind);
+    if (colorString[0] === '#') {
+      return '#' + colorBlindString;
+    } else {
+      return colorBlindString;
+    }
   };
 
   Lib.colorDistance = function(colorString1, colorString2) {
