@@ -19,7 +19,9 @@
     "delta-e": "~0.0.7",
     "angular": "~1.4.1",
     "lodash": "~3.9.3",
-    "i-color": "https://raw.githubusercontent.com/Shushik/i-color/master/i-color.js"
+    "i-color": "https://raw.githubusercontent.com/Shushik/i-color/master/i-color.js",
+    "jquery": "~2.1.4",
+    "jquery-minicolors": "~2.1.12"
   },
   "devDependencies": {
     "bourbon": "~4.2.1",

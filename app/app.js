@@ -22,6 +22,9 @@ app.directive('colorPair', function() {
 
         // init
         $scope.input = '#ff0000';
+        $('input#minicolors').minicolors({
+          defaultValue: $scope.input, // for plug-in default before ng binding
+        });
         $scope.colorChange();
       },
   };

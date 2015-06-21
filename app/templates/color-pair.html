@@ -1,5 +1,11 @@
-<div>
-  <input ng-model="input" ng-change="colorChange()">
-  <input type="color" ng-model="input" ng-change="colorChange()">
-  <input type="color" ng-model="output">  
+<div class="color-pair">
+  <input
+    id="minicolors"
+    type="text"
+    ng-model="input"
+    ng-change="colorChange()"
+    >
+  </input>
+
+  <input ng-model="output"></input>
 </div>
