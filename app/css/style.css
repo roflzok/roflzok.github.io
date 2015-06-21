@@ -372,7 +372,7 @@ h1 {
   font-size: 4rem; }
 
 h2 {
-  font-size: 2.25rem; }
+  font-size: 1.875rem; }
 
 h3 {
   font-size: 1.5rem; }
@@ -405,6 +405,39 @@ a {
   max-width: 58.75rem;
   margin-right: auto;
   margin-left: auto; }
+
+.column-headings h2 {
+  display: inline-block;
+  width: 49%;
+  background-color: #3a3a3a;
+  height: 3.25rem;
+  line-height: 3.25rem;
+  text-align: center; }
+  .column-headings h2:first-of-type {
+    margin-right: 0.625rem; }
+
+.color-preview {
+  width: 12.5rem;
+  height: 12.5rem;
+  border-radius: 100px; }
+  .color-preview.empty {
+    border: 2px dashed #6a6a6a; }
+
+input {
+  background-color: inherit;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid white;
+  text-align: center;
+  outline: none; }
+  input:hover {
+    cursor: text; }
+  input:focus {
+    outline: none; }
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.1s 0.1s ease;
+  opacity: 0; }
 
 
 /*# sourceMappingURL=style.css.map */
