@@ -40,6 +40,10 @@ Lib = {}; // global export
     ); // upperCase for Color.Blind and Delta
   };
 
+  var colorDistance = function(colorString1, colorString2) {
+    return DeltaE.getDeltaE00(colorToLab(colorString1), colorToLab(colorString2));
+  };
+
   Lib.colorToBlind = function(colorString, colorBlindType) {
     var colorBlindTypes = ['protan', 'deutan', 'tritan', 'achroma', 'custom'];
     colorBlindType = colorBlindType || 'deutan'; // default
@@ -57,9 +61,25 @@ Lib = {}; // global export
     }
   };
 
-  Lib.colorDistance = function(colorString1, colorString2) {
-    return DeltaE.getDeltaE94(colorToLab(colorString1), colorToLab(colorString2));
-  };
+  Lib.colorAssessment = function(colorString1, colorString2) {
+    var distance = Math.round(colorDistance(colorString1, colorString2));
+    var rgb = colorStringToRGB(colorString1);
+    var causes = {};
+    if (distance>30) {
+      if (rgb.R > 200) causes.highRed = true;
+      if (rgb.G > 200) causes.highGreen = true;
+      if (_.isEmpty(causes)) {
+        var cause = (rgb.R > rgb.G)? 'moderateRed' : 'moderateGreen';
+        causes[cause] = true;
+      }
+    }
+    
+    return {
+      distance: distance,
+      rgb: rgb,
+      causes: causes,
+    }
+  }
 
 })();
 

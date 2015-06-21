@@ -17,12 +17,14 @@ app.directive('colorPair', function() {
         $scope.colorChange = function(){
           try {
             $scope.output = Lib.colorToBlind($scope.input);
-          } catch (e) {}
+            $scope.assessment = Lib.colorAssessment($scope.input, $scope.output);
+          } catch (e) {
+            console.log(e)
+          }
         };
 
         $scope.inputClick = function(){
           elem.find('input').focus();
-          console.log('!!')
         };
 
         // init
