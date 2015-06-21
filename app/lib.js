@@ -65,17 +65,20 @@ Lib = {}; // global export
     var distance = Math.round(colorDistance(colorString1, colorString2));
     var rgb = colorStringToRGB(colorString1);
     var causes = {};
-    if (distance>30) {
+    var significant = (distance>30);
+    
+    if (significant) {
       if (rgb.R > 200) causes.highRed = true;
       if (rgb.G > 200) causes.highGreen = true;
       if (_.isEmpty(causes)) {
-        var cause = (rgb.R > rgb.G)? 'moderateRed' : 'moderateGreen';
+        var cause = (rgb.R > rgb.G)? 'highRed' : 'highGreen';
         causes[cause] = true;
       }
     }
     
     return {
       distance: distance,
+      significant: significant,
       rgb: rgb,
       causes: causes,
     }

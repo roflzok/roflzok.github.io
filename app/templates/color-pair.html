@@ -17,4 +17,12 @@
   	<color-block ng-model="output"></color-block>
   </div>
 
+  <div ng-show="assessment.significant">
+    People with colorblindness will perceive this color differently, because of its 
+    <span ng-if="assessment.causes.highRed">red</span>
+    <span ng-if="assessment.causes.highRed && assessment.causes.highGreen">and</span>
+    <span ng-if="assessment.causes.highGreen">green</span>
+    content.
+  </div>
+
 </div>
