@@ -4,10 +4,88 @@
 // ============================================================
 // ============================================================
 
+
 body {
 	background-color: $dark-gray;
+	font-family: $body-typeface;
+	font-weight: normal;
 	color: white;
 }
+
+
+// Typography
+// ============================================================
+
+@function rem($size) {
+  $remValue: ($size / 16);
+  @return #{$remValue}rem;
+}
+
+// Headings
+%headings {
+  font: normal 100%/1.25 $heading-typeface;
+  color: white;
+  letter-spacing: 0;
+  margin-top: rem(10);
+  margin-bottom: rem(10);
+}
+
+h1, h2, h3 {
+  @extend %headings;
+}
+
+$heading-size: (
+  h1: 64,
+  h2: 36,
+  h3: 24
+);
+
+@each $heading, $size in $heading-size {
+  #{$heading} {
+    font-size: rem($size);
+  }
+}
+
+
+// Paragraph
+p {
+  font-size: rem(16);
+  line-height: rem(26);
+  margin: 0 0 rem(10);
+}
+
+
+// Small
+small {
+  font-size: rem(12);
+  line-height: 125%;
+  letter-spacing: rem(1);
+  color: $light-gray;
+}
+
+
+// Anchor
+a {
+	padding-bottom: 2px;
+  font-weight: normal;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid $off-white;
+  &:active,
+  &:focus,
+  &:hover {
+		color: $off-white;
+  }
+}
+
+*:hover {
+  transition: 250ms;
+}
+
+
+
+// Layout
+// ============================================================
 
 .wrapper {
 	max-width: rem(940);
