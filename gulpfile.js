@@ -33,7 +33,7 @@ gulp.task('connect', function() {
 // ----------------------------------------
 // ----------------------------------------
 gulp.task('sassy', function () {
-    return gulp.src(__dirname + '/build/sass/style.scss')
+    return gulp.src(__dirname + '/app/sass/style.scss')
     .pipe($.plumber({ errorHandler: $.notify.onError("SASS compile has failed! <%= error %>") }))
     .pipe($.sourcemaps.init())
     .pipe($.sass({
@@ -41,8 +41,8 @@ gulp.task('sassy', function () {
         includePaths: bourbonPaths
     }))
     .pipe($.sourcemaps.write('./'))
-    .pipe(gulp.dest(__dirname + '/assets/css'))
-    .pipe($.notify({'title': 'SASScess', 'message': 'SASS build has succeeded!'}));
+    .pipe(gulp.dest(__dirname + '/app/css'))
+    .pipe($.notify({'title': 'SASScess', 'message': 'Do you even successful SASS build, bro?!'}));
 });
 
 
@@ -54,10 +54,10 @@ gulp.task('sassy', function () {
 // watch
 gulp.task('watch', function () {
     livereload.listen();
-    gulp.watch(['build/sass/**'], ['sassy']).on('change', livereload.changed);
-    gulp.watch(['build/js/*.js']).on('change', livereload.changed);
+    gulp.watch(['app/sass/**'], ['sassy']).on('change', livereload.changed);
+    gulp.watch(['app/*.js']).on('change', livereload.changed);
     gulp.watch(['*.html']).on('change', livereload.changed);
-    gulp.watch(['build/css/**']).on('change', livereload.changed);
+    gulp.watch(['app/css/**']).on('change', livereload.changed);
 });
 
 // default
