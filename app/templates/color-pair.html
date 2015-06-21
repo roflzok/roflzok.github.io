@@ -1,15 +1,14 @@
 <div class="row color-pair">
 	
 	<div class="half">
-		<color-block ng-model="input" ng-click="inputClick()">
-	  	<input
-		    id="minicolors"
-		    type="text"
-		    ng-model="input"
-		    ng-change="colorChange()"
-		    >
-		  </input>
-  	</color-block>
+		<input
+	    id="minicolors"
+	    type="text"
+	    ng-model="input"
+	    ng-change="colorChange()"
+	    >
+	  </input>
+		<color-block ng-model="input" ng-click="inputClick()"></color-block>
   </div>
 
   <div class="half">

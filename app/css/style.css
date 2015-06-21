@@ -438,6 +438,7 @@ a {
   -ms-flex-align: stretch; }
 
 .half {
+  position: relative;
   width: 50%;
   margin: 10px; }
 
@@ -452,6 +453,24 @@ header h1 {
   line-height: 3.25rem;
   text-align: center;
   border-radius: 6px; }
+
+.color-pair {
+  margin: 10px 0; }
+  .color-pair .minicolors {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -3.75rem;
+    margin-top: -15px; }
+  .color-pair .minicolors input[type=text] {
+    width: 7.5rem;
+    padding: 0.9375rem 0.625rem;
+    background-color: rgba(42, 42, 42, 0.5);
+    border-radius: 6px; }
+  .color-pair .minicolors-swatch {
+    display: none; }
+  .color-pair .minicolors-input {
+    padding-left: 1px; }
 
 .color-block {
   display: -webkit-box;
@@ -485,15 +504,6 @@ header h1 {
   -ms-flex-align: center;
   height: 8.75rem;
   border-radius: 6px; }
-  .color-block input[type=text] {
-    max-width: 7.5rem;
-    padding: 0.9375rem 0.625rem;
-    background-color: rgba(42, 42, 42, 0.5);
-    border-radius: 6px; }
-
-.add-color, a.add-color {
-  border: 2px dashed rgba(106, 106, 106, 0.5);
-  color: rgba(106, 106, 106, 0.5); }
 
 input {
   background-color: inherit;
@@ -524,12 +534,9 @@ input {
   transition: opacity 0.1s ease;
   opacity: 0; }
 
-.color-pair {
-  margin: 10px 0; }
-  .color-pair .minicolors-swatch {
-    display: none; }
-  .color-pair .minicolors-input {
-    padding-left: 1px; }
+.add-color, a.add-color {
+  border: 2px dashed rgba(106, 106, 106, 0.5);
+  color: rgba(106, 106, 106, 0.5); }
 
 
 /*# sourceMappingURL=style.css.map */
