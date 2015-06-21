@@ -406,22 +406,30 @@ a {
   margin-right: auto;
   margin-left: auto; }
 
+header h1 {
+  text-align: center;
+  margin-top: 3.125rem;
+  margin-bottom: 3.125rem; }
+
 .column-headings h2 {
   display: inline-block;
-  width: 49%;
   background-color: #3a3a3a;
   height: 3.25rem;
   line-height: 3.25rem;
-  text-align: center; }
+  text-align: center;
+  border-radius: 6px;
+  width: 27.5rem; }
   .column-headings h2:first-of-type {
-    margin-right: 0.625rem; }
+    margin-right: 3.4375rem; }
 
 .color-preview {
-  width: 12.5rem;
-  height: 12.5rem;
-  border-radius: 100px; }
+  height: 8.75rem;
+  border-radius: 6px; }
   .color-preview.empty {
     border: 2px dashed #6a6a6a; }
+  .color-preview p {
+    line-height: 8.75rem;
+    text-align: center; }
 
 input {
   background-color: inherit;

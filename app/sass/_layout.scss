@@ -11,24 +11,34 @@
 	margin-left: auto;
 }
 
+header h1 {
+	text-align: center;
+	margin-top: $pad-md;
+	margin-bottom: $pad-md;
+}
+
 .column-headings h2 {
 	display: inline-block;
-	width: 49%;
 	background-color: $medium-gray;
 	height: rem(52);
 	line-height: rem(52);
 	text-align: center;
+	border-radius: $radius;
+	width: rem(440);
 	&:first-of-type {
-		margin-right: rem(10);
+		margin-right: rem(55);
 	}
 }
 
 .color-preview {
-	width: rem(200);
-	height: rem(200);
-	border-radius: 100px;
+	height: rem(140);
+	border-radius: $radius;
 	&.empty {
 		border: 2px dashed $light-gray;
+	}
+	p {
+		line-height: rem(140);
+		text-align: center;
 	}
 }
 

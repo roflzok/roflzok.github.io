@@ -15,12 +15,24 @@
 
 
 <body ng-app="color" ng-controller="mainController">
-  <div style="margin:auto; width:500px;">
-    <div ng-repeat="pair in colorPairs">
-      <color-pair></color-pair>
-    </div>
-    <div>
-      <a href="" ng-click="addPair()">+ add</a>
-    </div>
-  </div>
+	<main>
+		<div class="wrapper">
+			<header>
+				<h1>Do my colors fail?</h1>
+			</header>
+
+			<div class="column-headings">
+				<h2>Original</h2>
+				<h2>Blindness</h2>
+			</div>
+
+	    <div ng-repeat="pair in colorPairs">
+	      <color-pair></color-pair>
+	    </div>
+	    <div>
+	      <a href="" ng-click="addPair()">+ add</a>
+	    </div>
+
+  	</div> <!-- /end .wrapper -->
+  </main>
 </body>
