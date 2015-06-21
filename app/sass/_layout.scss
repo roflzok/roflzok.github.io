@@ -25,9 +25,10 @@
 }
 
 header h1 {
-	text-align: center;
 	margin-top: $pad-md;
 	margin-bottom: $pad-md;
+	text-align: center;
+	text-transform: capitalize;
 }
 
 .column-headings h2 {
@@ -51,11 +52,11 @@ header h1 {
   	top: 50%;
   	left: 50%;
   	margin-left: rem(-60);
-  	margin-top: -15px;
+  	margin-top: -24px;
   }
   .minicolors input[type=text] {
 		width: rem(120);
-		padding: rem(15) rem(10);
+		padding: 24px 10px;
 		background-color: rgba(42,42,42,0.5);
 		border-radius: $radius;
 	}
@@ -80,11 +81,12 @@ input {
 	background-color: inherit;
 	box-shadow: none;
 	border: none;
-	text-align: center;
-	outline: none;
+	font-family: 'PT Mono', Verdana, sans-serif;
 	font-size: 18px;
 	letter-spacing: 2px;
-	font-family: "gt_haptikmedium", Verdana, sans-serif;
+	text-align: center;
+	outline: none;
+	text-transform: uppercase;
 	&:hover {
 		cursor: text;
 	}

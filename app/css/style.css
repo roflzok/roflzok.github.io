@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Mono);
 /* *********************************** */
 /* *********************************** */
 /* DO NOT EDIT THIS CSS FILE DIRECTLY! */
@@ -446,9 +447,10 @@ a {
   margin: 10px; }
 
 header h1 {
-  text-align: center;
   margin-top: 3.125rem;
-  margin-bottom: 3.125rem; }
+  margin-bottom: 3.125rem;
+  text-align: center;
+  text-transform: capitalize; }
 
 .column-headings h2 {
   background-color: #3a3a3a;
@@ -464,10 +466,10 @@ header h1 {
     top: 50%;
     left: 50%;
     margin-left: -3.75rem;
-    margin-top: -15px; }
+    margin-top: -24px; }
   .color-pair .minicolors input[type=text] {
     width: 7.5rem;
-    padding: 0.9375rem 0.625rem;
+    padding: 24px 10px;
     background-color: rgba(42, 42, 42, 0.5);
     border-radius: 6px; }
   .color-pair .minicolors-swatch {
@@ -512,11 +514,12 @@ input {
   background-color: inherit;
   box-shadow: none;
   border: none;
-  text-align: center;
-  outline: none;
+  font-family: 'PT Mono', Verdana, sans-serif;
   font-size: 18px;
   letter-spacing: 2px;
-  font-family: "gt_haptikmedium", Verdana, sans-serif; }
+  text-align: center;
+  outline: none;
+  text-transform: uppercase; }
   input:hover {
     cursor: text; }
   input:focus {
