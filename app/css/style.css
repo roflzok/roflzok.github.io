@@ -453,7 +453,7 @@ header h1 {
   text-align: center;
   border-radius: 6px; }
 
-.color-preview, .add-color, a.add-color {
+.color-block {
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -485,7 +485,7 @@ header h1 {
   -ms-flex-align: center;
   height: 8.75rem;
   border-radius: 6px; }
-  .color-preview input[type=text], .add-color input[type=text] {
+  .color-block input[type=text] {
     max-width: 7.5rem;
     padding: 0.9375rem 0.625rem;
     background-color: rgba(42, 42, 42, 0.5);

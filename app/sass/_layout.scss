@@ -42,7 +42,7 @@ header h1 {
 	// }
 }
 
-.color-preview {
+.color-block {
 	@include display(flex);
 	@include justify-content(center);
 	@include align-content(center);
