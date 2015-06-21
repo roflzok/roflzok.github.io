@@ -1,10 +1,15 @@
 <!-- vendor -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/Color.Space/index.js"></script>
 <script src="bower_components/Color.Blind/index.js"></script>
 <script src="bower_components/i-color/index.js"></script>
 <script src="bower_components/delta-e/dist/deltae.global.min.js"></script>
 <script src="bower_components/lodash/lodash.min.js"></script>
-<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-minicolors/angular-minicolors.js"></script>
+
+<script src="bower_components/jquery-minicolors/jquery.minicolors.min.js"></script>
+<link rel="stylesheet" href="bower_components/jquery-minicolors/jquery.minicolors.css">
 
 <!-- app -->
 <script src="app/lib.js"></script>
@@ -15,6 +20,7 @@
 
 
 <body ng-app="color" ng-controller="mainController">
+
   <div style="margin:auto; width:500px;">
     <div ng-repeat="pair in colorPairs">
       <color-pair></color-pair>
@@ -23,4 +29,6 @@
       <a href="" ng-click="addPair()">+ add</a>
     </div>
   </div>
+
+
 </body>
