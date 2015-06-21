@@ -5,10 +5,12 @@
 	    id="minicolors"
 	    type="text"
 	    ng-model="input"
-	    ng-change="colorChange()"
+      ng-change="colorChange()"
+      ng-blur="colorChange(true)"
 	    >
 	  </input>
-		<color-block ng-model="input"></color-block>
+
+    <color-block ng-model="input"></color-block>
   </div>
 
   <div class="half">

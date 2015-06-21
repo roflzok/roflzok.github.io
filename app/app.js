@@ -14,21 +14,27 @@ app.directive('colorPair', function() {
       scope: {},
       templateUrl: 'app/templates/color-pair.html',
       link: function($scope, elem, attrs) {
-        $scope.colorChange = function(){
+        var init = function(){
+          $scope.input = '#ff0000';
+          elem.find('#minicolors').minicolors({
+            defaultValue: $scope.input, // for plug-in default before ng binding
+          });
+          $scope.colorChange();
+        };
+                
+        $scope.colorChange = function(fallback){
           try {
             $scope.output = Lib.colorToBlind($scope.input);
             $scope.assessment = Lib.colorAssessment($scope.input, $scope.output);
           } catch (e) {
-            console.log(e)
+            if (fallback) {
+              console.log('re-init!');
+              init();
+            }
           }
         };
 
-        // init
-        $scope.input = '#ff0000';
-        elem.find('#minicolors').minicolors({
-          defaultValue: $scope.input, // for plug-in default before ng binding
-        });
-        $scope.colorChange();
+        init();
       },
   };
 });

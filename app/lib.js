@@ -5,8 +5,8 @@ Lib = {}; // global export
     if (colorString[0] === '#') {
       colorString = colorString.substr(1);
     }
-    if (colorString.length !== 6) {
-      throw new Error('Color must be 6 characters long.');
+    if (!colorString.match(/^[a-f0-9A-F]{6}$/)) {
+      throw new Error('Must be 6-digit hex color');
     }
     return Color.Space.HEX_RGB(
       Color.Space.STRING_HEX(colorString)
