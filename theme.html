@@ -17,6 +17,7 @@
 
 	<main>
 		<div class="wrapper">
+			
 			<section class="text-styles">
 			  <h1>Heading One</h1>
 			  <h2>Heading Two</h2>
@@ -25,18 +26,30 @@
 			  <p><a href="#">Text Link</a></p>
 			  <small>Autem praesentium, neque possimus voluptate architecto, aliquid consequuntur, odit veniam accusamus, nesciunt eaque beatae aut nostrum. Molestias sit porro magni itaque tempora.</small>
 			</section>
+			
 			<section>
-				<div class="column-headings">
-					<h2>Original</h2>
-					<h2>Blindness</h2>
+				<div class="row column-headings">
+					<div class="half"><h2>Original</h2></div>
+					<div class="half"><h2>Blindness</h2></div>
 				</div>
-				<div class="color-preview empty">&nbsp;</div>
-				<div class="color-preview" style="background-color: #ff0000;">&nbsp;</div>
-				<div class="hex"></div>
-    		<input type="hexValue1" id="exampleInputEmail1" placeholder="Hex">
 
+				<div class="row">
+					<div class="half">
+						<div class="color-preview" style="background-color: #ff0000;">
+							<input type="text" id="" maxlength="6" placeholder="FF0000">
+						</div>
+					</div>
+					<div class="half">
+						<div class="color-preview" style="background-color: #00ff00;">
+						</div>
+					</div>
+				</div>
 
+				<div class="row">
+					<a class="add-color" href="#">+ Another color</a>
+				</div>
 			</section>
+
 		</div>
 	</main>
 
