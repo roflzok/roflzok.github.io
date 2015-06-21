@@ -13,8 +13,9 @@
 <script src="app/lib.js"></script>
 <script src="app/app.js"></script>
 
-<body ng-app="color" ng-controller="mainController">
-
+<!-- <body ng-app="color" ng-controller="mainController"> -->
+<body>
+	
 	<main>
 		<div class="wrapper">
 			
@@ -33,7 +34,20 @@
 					<div class="half"><h2>Blindness</h2></div>
 				</div>
 
-				<div class="row">
+				<div ng-repeat="pair in colorPairs" class="ng-scope">
+	      	<div class="row color-pair ng-isolate-scope">
+						<div class="half">
+	  					<div class="color-block ng-isolate-scope ng-valid" style="background-color:#ff0000" ng-model="input" ng-click="inputClick()">
+	  						<div class="minicolors minicolors-theme-default minicolors-position-bottom minicolors-position-left"><input id="minicolors" type="text" ng-model="input" ng-change="colorChange()" class="ng-pristine ng-untouched ng-valid minicolors-input" size="7"><span class="minicolors-swatch minicolors-sprite"><span class="minicolors-swatch-color" style="background-color: rgb(255, 0, 0);"></span></span><div class="minicolors-panel minicolors-slider-hue"><div class="minicolors-slider minicolors-sprite"><div class="minicolors-picker" style="top: 150px;"></div></div><div class="minicolors-opacity-slider minicolors-sprite"><div class="minicolors-picker"></div></div><div class="minicolors-grid minicolors-sprite" style="background-color: rgb(255, 0, 0);"><div class="minicolors-grid-inner"></div><div class="minicolors-picker" style="top: 0px; left: 150px;"><div></div></div></div></div></div>
+	  					</div>
+  					</div>
+  					<div class="half">
+  						<div class="color-block ng-isolate-scope ng-valid" style="background-color:#a07700" ng-model="output"></div>
+  					</div>
+					</div>
+	    	</div>
+
+				<!-- <div class="row">
 					<div class="half">
 						<div class="color-preview" style="background-color: #ff0000;">
 							<input type="text" id="" maxlength="6" placeholder="FF0000">
@@ -44,7 +58,7 @@
 						</div>
 					</div>
 				</div>
-
+ -->
 				<div class="row">
 					<a class="add-color" href="#">+ Another color</a>
 				</div>
