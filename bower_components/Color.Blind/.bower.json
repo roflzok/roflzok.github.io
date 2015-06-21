@@ -1,0 +1,14 @@
+{
+  "name": "Color.Blind",
+  "_cacheHeaders": {
+    "ETag": "\"df985-1194-502f0a4739c80\"",
+    "Last-Modified": "Sat, 20 Jun 2015 17:20:57 GMT",
+    "Content-Length": "4500",
+    "Content-Type": "application/javascript"
+  },
+  "_release": "e-tag:df985-119",
+  "main": "index.js",
+  "_source": "http://mudcu.be/sphere/js/Color.Blind.js",
+  "_target": "*",
+  "_originalSource": "http://mudcu.be/sphere/js/Color.Blind.js"
+}

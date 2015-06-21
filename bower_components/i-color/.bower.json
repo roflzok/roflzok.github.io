@@ -1,0 +1,13 @@
+{
+  "name": "i-color",
+  "_cacheHeaders": {
+    "ETag": "\"c3582a9aa63f7452d199ca4afbb8a0bebfec618e\"",
+    "Content-Length": "30354",
+    "Content-Type": "text/plain; charset=utf-8"
+  },
+  "_release": "e-tag:c3582a9aa",
+  "main": "index.js",
+  "_source": "https://raw.githubusercontent.com/Shushik/i-color/master/i-color.js",
+  "_target": "*",
+  "_originalSource": "https://raw.githubusercontent.com/Shushik/i-color/master/i-color.js"
+}
