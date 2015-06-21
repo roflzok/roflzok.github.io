@@ -19,14 +19,16 @@
 }
 
 .half {
+	position: relative;
 	width: 50%;
 	margin: 10px;
 }
 
 header h1 {
-	text-align: center;
 	margin-top: $pad-md;
 	margin-bottom: $pad-md;
+	text-align: center;
+	text-transform: capitalize;
 }
 
 .column-headings h2 {
@@ -42,6 +44,30 @@ header h1 {
 	// }
 }
 
+
+.color-pair {
+  margin: 10px 0;
+  .minicolors {
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	margin-left: rem(-60);
+  	margin-top: -24px;
+  }
+  .minicolors input[type=text] {
+		width: rem(120);
+		padding: 24px 10px;
+		background-color: rgba(42,42,42,0.5);
+		border-radius: $radius;
+	}
+  .minicolors-swatch{
+    display: none;
+  }
+  .minicolors-input {
+    padding-left: 1px;
+  }
+}
+
 .color-block {
 	@include display(flex);
 	@include justify-content(center);
@@ -49,27 +75,18 @@ header h1 {
 	@include align-items(center);
 	height: rem(140);
 	border-radius: $radius;
-	input[type=text] {
-		max-width: rem(120);
-		padding: rem(15) rem(10);
-		background-color: rgba(42,42,42,0.5);
-		border-radius: $radius;
-	}
-}
-
-.add-color,
-a.add-color {
-	@extend .color-preview;
-	border: 2px dashed rgba(106,106,106,0.5);
-	color: rgba(106,106,106,0.5);
 }
 
 input {
 	background-color: inherit;
 	box-shadow: none;
 	border: none;
+	font-family: 'PT Mono', Verdana, sans-serif;
+	font-size: 18px;
+	letter-spacing: 2px;
 	text-align: center;
 	outline: none;
+	text-transform: uppercase;
 	&:hover {
 		cursor: text;
 	}
@@ -101,4 +118,11 @@ input {
 [placeholder]:focus::-webkit-input-placeholder {
   transition: opacity 0.1s ease; 
   opacity: 0;
+}
+
+.add-color,
+a.add-color {
+	@extend .color-preview;
+	border: 2px dashed rgba(106,106,106,0.5);
+	color: rgba(106,106,106,0.5);
 }

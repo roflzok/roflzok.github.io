@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Mono);
 /* *********************************** */
 /* *********************************** */
 /* DO NOT EDIT THIS CSS FILE DIRECTLY! */
@@ -362,7 +363,7 @@ body {
   color: white; }
 
 h1, h2, h3 {
-  font: normal 100%/1.25 "gt_haptikbold", Verdana, "Helvetica Neue", Helvetica, sans-serif;
+  font: normal 100%/1.25 "gt_haptikmedium", Verdana, "Helvetica Neue", Helvetica, sans-serif;
   color: white;
   letter-spacing: 0;
   margin-top: 0.625rem;
@@ -376,6 +377,9 @@ h2 {
 
 h3 {
   font-size: 1.5rem; }
+
+h1 {
+  font-family: "gt_haptikbold", Verdana, sans-serif; }
 
 p {
   font-size: 1rem;
@@ -438,13 +442,15 @@ a {
   -ms-flex-align: stretch; }
 
 .half {
+  position: relative;
   width: 50%;
   margin: 10px; }
 
 header h1 {
-  text-align: center;
   margin-top: 3.125rem;
-  margin-bottom: 3.125rem; }
+  margin-bottom: 3.125rem;
+  text-align: center;
+  text-transform: capitalize; }
 
 .column-headings h2 {
   background-color: #3a3a3a;
@@ -452,6 +458,24 @@ header h1 {
   line-height: 3.25rem;
   text-align: center;
   border-radius: 6px; }
+
+.color-pair {
+  margin: 10px 0; }
+  .color-pair .minicolors {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -3.75rem;
+    margin-top: -24px; }
+  .color-pair .minicolors input[type=text] {
+    width: 7.5rem;
+    padding: 24px 10px;
+    background-color: rgba(42, 42, 42, 0.5);
+    border-radius: 6px; }
+  .color-pair .minicolors-swatch {
+    display: none; }
+  .color-pair .minicolors-input {
+    padding-left: 1px; }
 
 .color-block {
   display: -webkit-box;
@@ -485,22 +509,17 @@ header h1 {
   -ms-flex-align: center;
   height: 8.75rem;
   border-radius: 6px; }
-  .color-block input[type=text] {
-    max-width: 7.5rem;
-    padding: 0.9375rem 0.625rem;
-    background-color: rgba(42, 42, 42, 0.5);
-    border-radius: 6px; }
-
-.add-color, a.add-color {
-  border: 2px dashed rgba(106, 106, 106, 0.5);
-  color: rgba(106, 106, 106, 0.5); }
 
 input {
   background-color: inherit;
   box-shadow: none;
   border: none;
+  font-family: 'PT Mono', Verdana, sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
   text-align: center;
-  outline: none; }
+  outline: none;
+  text-transform: uppercase; }
   input:hover {
     cursor: text; }
   input:focus {
@@ -524,12 +543,9 @@ input {
   transition: opacity 0.1s ease;
   opacity: 0; }
 
-.color-pair {
-  margin: 10px 0; }
-  .color-pair .minicolors-swatch {
-    display: none; }
-  .color-pair .minicolors-input {
-    padding-left: 1px; }
+.add-color, a.add-color {
+  border: 2px dashed rgba(106, 106, 106, 0.5);
+  color: rgba(106, 106, 106, 0.5); }
 
 
 /*# sourceMappingURL=style.css.map */
