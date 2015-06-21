@@ -12,16 +12,16 @@ body {
 	color: white;
 }
 
-
-// Typography
-// ============================================================
-
 @function rem($size) {
   $remValue: ($size / 16);
   @return #{$remValue}rem;
 }
 
+
+
 // Headings
+// ============================================================
+
 %headings {
   font: normal 100%/1.25 $heading-typeface;
   color: white;
@@ -47,15 +47,17 @@ $heading-size: (
 }
 
 
-// Paragraph
+
+// Body Text
+// ============================================================
+
 p {
   font-size: rem(16);
   line-height: rem(26);
+  letter-spacing: rem(1);
   margin: 0 0 rem(10);
 }
 
-
-// Small
 small {
   font-size: rem(12);
   line-height: 125%;
@@ -63,8 +65,6 @@ small {
   color: $light-gray;
 }
 
-
-// Anchor
 a {
 	padding-bottom: 2px;
   font-weight: normal;
@@ -80,15 +80,4 @@ a {
 
 *:hover {
   transition: 250ms;
-}
-
-
-
-// Layout
-// ============================================================
-
-.wrapper {
-	max-width: rem(940);
-	margin-right: auto;
-	margin-left: auto;
 }

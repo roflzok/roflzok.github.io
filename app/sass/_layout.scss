@@ -1,18 +1,12 @@
 // ============================================================
 // ============================================================
-// Mutoid Men Imports
+// Mutoid Men Layout Styles
 // ============================================================
 // ============================================================
 
-@import "warning";
 
-@import "bourbon";
-@import "normalize";
-
-@import "variables";
-@import "typography";
-@import "base";
-@import "layout";
-// @import "mediaqueries";
-
-@import "shame";
+.wrapper {
+	max-width: rem(940);
+	margin-right: auto;
+	margin-left: auto;
+}
