@@ -362,7 +362,7 @@ body {
   color: white; }
 
 h1, h2, h3 {
-  font: normal 100%/1.25 "gt_haptikbold", Verdana, "Helvetica Neue", Helvetica, sans-serif;
+  font: normal 100%/1.25 "gt_haptikmedium", Verdana, "Helvetica Neue", Helvetica, sans-serif;
   color: white;
   letter-spacing: 0;
   margin-top: 0.625rem;
@@ -376,6 +376,9 @@ h2 {
 
 h3 {
   font-size: 1.5rem; }
+
+h1 {
+  font-family: "gt_haptikbold", Verdana, sans-serif; }
 
 p {
   font-size: 1rem;
@@ -510,7 +513,10 @@ input {
   box-shadow: none;
   border: none;
   text-align: center;
-  outline: none; }
+  outline: none;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: "gt_haptikmedium", Verdana, sans-serif; }
   input:hover {
     cursor: text; }
   input:focus {
