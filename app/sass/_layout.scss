@@ -11,6 +11,18 @@
 	margin-left: auto;
 }
 
+.row {
+	@include display(flex);
+	@include justify-content(center);
+	@include align-content(stretch);
+	@include align-items(stretch);
+}
+
+.half {
+	width: 50%;
+	margin: 10px;
+}
+
 header h1 {
 	text-align: center;
 	margin-top: $pad-md;
@@ -18,35 +30,44 @@ header h1 {
 }
 
 .column-headings h2 {
-	display: inline-block;
+	// display: inline-block;
 	background-color: $medium-gray;
 	height: rem(52);
 	line-height: rem(52);
 	text-align: center;
 	border-radius: $radius;
-	width: rem(440);
-	&:first-of-type {
-		margin-right: rem(55);
-	}
+	// width: rem(440);
+	// &:first-of-type {
+	// 	margin-right: rem(55);
+	// }
 }
 
 .color-preview {
+	@include display(flex);
+	@include justify-content(center);
+	@include align-content(center);
+	@include align-items(center);
 	height: rem(140);
 	border-radius: $radius;
-	&.empty {
-		border: 2px dashed $light-gray;
+	input[type=text] {
+		max-width: rem(120);
+		padding: rem(15) rem(10);
+		background-color: rgba(42,42,42,0.5);
+		border-radius: $radius;
 	}
-	p {
-		line-height: rem(140);
-		text-align: center;
-	}
+}
+
+.add-color,
+a.add-color {
+	@extend .color-preview;
+	border: 2px dashed rgba(106,106,106,0.5);
+	color: rgba(106,106,106,0.5);
 }
 
 input {
 	background-color: inherit;
 	box-shadow: none;
 	border: none;
-	border-bottom: 1px solid white;
 	text-align: center;
 	outline: none;
 	&:hover {
@@ -57,7 +78,27 @@ input {
 	}
 }
 
+
+
+// Placeholder
+
+::-webkit-input-placeholder {
+   color: white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+
+:-ms-input-placeholder {  
+   color: white;  
+}
+
 [placeholder]:focus::-webkit-input-placeholder {
-  transition: opacity 0.1s 0.1s ease; 
+  transition: opacity 0.1s ease; 
   opacity: 0;
 }
