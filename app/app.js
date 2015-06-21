@@ -1,12 +1,28 @@
 var app = angular.module('color', []);
 
 app.controller('mainController', function($scope) {
-  var initialColor = '#ff0000';
-  $scope.colors = {
-    a: initialColor,
-    b: Lib.colorToBlind(initialColor),
+  $scope.colorPairs = [0];
+  $scope.addPair = function() {
+    $scope.colorPairs.push($scope.colorPairs.length);
   };
-  $scope.colorChange = function(){
-    $scope.colors.b = Lib.colorToBlind($scope.colors.a);
+});
+
+app.directive('colorPair', function() {
+  return {
+      restrict: 'E',
+      replace: true,
+      scope: {},
+      templateUrl: 'app/templates/color-pair.html',
+      link: function($scope, elem, attrs) {
+        $scope.colorChange = function(){
+          try {
+            $scope.output = Lib.colorToBlind($scope.input);
+          } catch (e) {}
+        };
+
+        // init
+        $scope.input = '#ff0000';
+        $scope.colorChange();
+      },
   };
 });

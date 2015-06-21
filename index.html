@@ -10,10 +10,17 @@
 <script src="app/lib.js"></script>
 <script src="app/app.js"></script>
 
+<!-- styles -->
+<link rel="stylesheet" href="app/css/style.css">
+
+
 <body ng-app="color" ng-controller="mainController">
-  <input type="color" ng-model="colors.a" ng-change="colorChange()">
-  <input type="color" ng-model="colors.b">
-  <pre>
-    {{colors}}
-  </pre>
+  <div style="margin:auto; width:500px;">
+    <div ng-repeat="pair in colorPairs">
+      <color-pair></color-pair>
+    </div>
+    <div>
+      <a href="" ng-click="addPair()">+ add</a>
+    </div>
+  </div>
 </body>
