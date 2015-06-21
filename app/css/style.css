@@ -378,9 +378,6 @@ h2 {
 h3 {
   font-size: 1.5rem; }
 
-h1 {
-  font-family: "gt_haptikbold", Verdana, sans-serif; }
-
 p {
   font-size: 1rem;
   line-height: 1.625rem;
@@ -451,6 +448,10 @@ header h1 {
   margin-bottom: 3.125rem;
   text-align: center;
   text-transform: capitalize; }
+  header h1 img {
+    display: inline-block;
+    width: 76px;
+    height: 66px; }
 
 .column-headings h2 {
   background-color: #3a3a3a;
