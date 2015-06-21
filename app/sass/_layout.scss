@@ -29,19 +29,19 @@ header h1 {
 	margin-bottom: $pad-md;
 	text-align: center;
 	text-transform: capitalize;
+	img {
+		display: inline-block;
+		width: 76px;
+		height: 66px;
+	}
 }
 
 .column-headings h2 {
-	// display: inline-block;
 	background-color: $medium-gray;
 	height: rem(52);
 	line-height: rem(52);
 	text-align: center;
 	border-radius: $radius;
-	// width: rem(440);
-	// &:first-of-type {
-	// 	margin-right: rem(55);
-	// }
 }
 
 
