@@ -20,5 +20,9 @@
     "angular": "~1.4.1",
     "lodash": "~3.9.3",
     "i-color": "https://raw.githubusercontent.com/Shushik/i-color/master/i-color.js"
+  },
+  "devDependencies": {
+    "bourbon": "~4.2.1",
+    "neat": "~1.7.2"
   }
 }

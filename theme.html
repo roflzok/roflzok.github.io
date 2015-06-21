@@ -1,0 +1,43 @@
+<!-- inject some styles 'n shit -->
+<link rel="stylesheet" href="app/css/style.css">
+
+<!-- vendor -->
+<script src="bower_components/Color.Space/index.js"></script>
+<script src="bower_components/Color.Blind/index.js"></script>
+<script src="bower_components/i-color/index.js"></script>
+<script src="bower_components/delta-e/dist/deltae.global.min.js"></script>
+<script src="bower_components/lodash/lodash.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+
+<!-- app -->
+<script src="app/lib.js"></script>
+<script src="app/app.js"></script>
+
+<body ng-app="color" ng-controller="mainController">
+
+	<main>
+		<div class="wrapper">
+			<section class="text-styles">
+			  <h1>Heading One</h1>
+			  <h2>Heading Two</h2>
+			  <h3>Heading Three</h3>
+			  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis excepturi provident id laboriosam similique labore consectetur quidem qui, illo iste earum. Adipisci repudiandae, fugiat ullam pariatur asperiores. Cum est, quo? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed sapien quam. Sed dapibus est id enim facilisis, at posuere turpis adipiscing.</p>
+			  <p><a href="#">Text Link</a></p>
+			  <small>Autem praesentium, neque possimus voluptate architecto, aliquid consequuntur, odit veniam accusamus, nesciunt eaque beatae aut nostrum. Molestias sit porro magni itaque tempora.</small>
+			</section>
+			<section>
+				<div class="column-headings">
+					<h2>Original</h2>
+					<h2>Blindness</h2>
+				</div>
+				<div class="color-preview empty">&nbsp;</div>
+				<div class="color-preview" style="background-color: #ff0000;">&nbsp;</div>
+				<div class="hex"></div>
+    		<input type="hexValue1" id="exampleInputEmail1" placeholder="Hex">
+
+
+			</section>
+		</div>
+	</main>
+
+</body>

@@ -1,0 +1,53 @@
+// ============================================================
+// ============================================================
+// Mutoid Men Layout Styles
+// ============================================================
+// ============================================================
+
+
+.wrapper {
+	max-width: rem(940);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.column-headings h2 {
+	display: inline-block;
+	width: 49%;
+	background-color: $medium-gray;
+	height: rem(52);
+	line-height: rem(52);
+	text-align: center;
+	&:first-of-type {
+		margin-right: rem(10);
+	}
+}
+
+.color-preview {
+	width: rem(200);
+	height: rem(200);
+	border-radius: 100px;
+	&.empty {
+		border: 2px dashed $light-gray;
+	}
+}
+
+input {
+	background-color: inherit;
+	box-shadow: none;
+	border: none;
+	border-bottom: 1px solid white;
+	text-align: center;
+	outline: none;
+	&:hover {
+		cursor: text;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.1s 0.1s ease; 
+  opacity: 0;
+}
