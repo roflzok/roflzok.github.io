@@ -320,5 +320,53 @@ table {
 td, th {
   padding: 0; }
 
+h1, h2, h3 {
+  font: bold 100%/1.25 Verdana, "Helvetica Neue", Helvetica, sans-serif;
+  color: white;
+  letter-spacing: 0;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem; }
+
+h1 {
+  font-size: 4rem; }
+
+h2 {
+  font-size: 2.25rem; }
+
+h3 {
+  font-size: 1.5rem; }
+
+p {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  margin: 0 0 0.625rem; }
+
+small {
+  font-size: 0.75rem;
+  line-height: 125%;
+  letter-spacing: 0.0625rem;
+  color: #6a6a6a; }
+
+a {
+  padding-bottom: 2px;
+  font-weight: normal;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid #cacaca; }
+  a:active, a:focus, a:hover {
+    color: #cacaca; }
+
+*:hover {
+  transition: 250ms; }
+
+body {
+  background-color: #2a2a2a;
+  color: white; }
+
+.wrapper {
+  max-width: 58.75rem;
+  margin-right: auto;
+  margin-left: auto; }
+
 
 /*# sourceMappingURL=style.css.map */

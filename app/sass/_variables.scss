@@ -1,6 +1,6 @@
 // ============================================================
 // ============================================================
-// Variables
+// Mutoid Men Variables
 // ============================================================
 // ============================================================
 
@@ -8,16 +8,22 @@
 // Typefaces
 // ============================================================
 
-// $heading-typeface: "Source Sans Pro", sans-serif;
-// $body-typeface: "proxima-nova", Verdana, "Helvetica Neue", Helvetica, sans-serif;
+$body-typeface: Verdana, "Helvetica Neue", Helvetica, sans-serif;
 
 
 
 // Colors
 // ============================================================
 
+$dark-gray: #2a2a2a;
+$medium-gray: #3a3a3a;
+$light-gray: #6a6a6a;
+$off-white: #cacaca;
 
 
 // Padding
 // ============================================================
 
+$pad-sm: rem(25);
+$pad-md: rem(50);
+$pad-lg: rem(100);

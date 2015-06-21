@@ -42,7 +42,7 @@ gulp.task('sassy', function () {
     }))
     .pipe($.sourcemaps.write('./'))
     .pipe(gulp.dest(__dirname + '/app/css'))
-    .pipe($.notify({'title': 'SASScess', 'message': 'Do you even successful SASS build, bro?!'}));
+    .pipe($.notify({'title': 'Success!', 'message': 'Do you even successful SASS build, bro?!'}));
 });
 
 
