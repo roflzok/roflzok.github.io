@@ -20,12 +20,36 @@ app.directive('colorPair', function() {
           } catch (e) {}
         };
 
+        $scope.inputClick = function(){
+          elem.find('input').focus();
+          console.log('!!')
+        };
+
         // init
         $scope.input = '#ff0000';
-        $('input#minicolors').minicolors({
+        elem.find('#minicolors').minicolors({
           defaultValue: $scope.input, // for plug-in default before ng binding
         });
         $scope.colorChange();
+      },
+  };
+});
+
+app.directive('colorBlock', function() {
+  return {
+      restrict: 'E',
+      replace: true,
+      scope: {
+        ngModel: '=',
+        onClick: '=',
+      },
+      template: '<div class="color-block" style="background-color:{{ngModel}}"></div>',
+      link: function($scope, elem, attrs) {
+        elem.click(function(){
+          if ($scope.onClick) {
+            $scope.onClick();
+          }
+        });
       },
   };
 });
