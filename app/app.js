@@ -23,10 +23,6 @@ app.directive('colorPair', function() {
           }
         };
 
-        $scope.inputClick = function(){
-          elem.find('input').focus();
-        };
-
         // init
         $scope.input = '#ff0000';
         elem.find('#minicolors').minicolors({
@@ -46,12 +42,6 @@ app.directive('colorBlock', function() {
         onClick: '=',
       },
       template: '<div class="color-block" style="background-color:{{ngModel}}"></div>',
-      link: function($scope, elem, attrs) {
-        elem.click(function(){
-          if ($scope.onClick) {
-            $scope.onClick();
-          }
-        });
-      },
+      link: function($scope, elem, attrs) {},
   };
 });
